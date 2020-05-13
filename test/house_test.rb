@@ -9,6 +9,13 @@ class HouseTest < Minitest::Test
     house = House.new("$400000", "123 sugar lane")
     assert_instance_of House, house
   end
+
+  def test_it_can_read_price_and_address_attributes
+    house = House.new("$400000", "123 sugar lane")
+    
+    assert_equal 400000, house.price
+    assert_equal "123 sugar lane", house.address
+  end
 end
 
 

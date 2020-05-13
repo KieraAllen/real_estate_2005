@@ -9,7 +9,6 @@ class RoomTest < Minitest::Test
   end
 
   def test_it_has_a_category
-    skip
     room = Room.new(:bedroom, 10, '13')
     assert_equal :bedroom, room.category
   end
@@ -25,12 +24,6 @@ end
 
 
 
-# pry(main)> room = Room.new(:bedroom, 10, "13")
-# #=> #<Room:0x00007fa53b9ca0a8 @category=:bedroom, @length=10, @width="13">
-#
-# pry(main)> room.category
-# #=> :bedroom
-#
 # pry(main)> room.area
 # #=> 130
 #

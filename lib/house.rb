@@ -30,4 +30,11 @@ class House
     end
     house_area
   end
+
+  def details
+    details = {}
+    details["price"] = price
+    details["address"] = address
+    details
+  end
 end

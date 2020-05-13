@@ -22,17 +22,19 @@ class RoomTest < Minitest::Test
 
   def test_it_has_length_and_width
     room = Room.new(:bedroom, 10, '13')
-    
+
     assert_equal 10, room.length
     assert_equal 13, room.width
+  end
+
+  def test_it_starts_not_painted
+    room = Room.new(:bedroom, 10, '13')
+
+    assert_equal false, room.is_painted?
   end
 end
 
 
-
-# pry(main)> room.is_painted?
-# #=> false
-#
 # pry(main)> room.paint
 #
 # pry(main)> room.is_painted?

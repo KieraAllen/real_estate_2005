@@ -14,7 +14,6 @@ class RoomTest < Minitest::Test
   end
 
   def test_it_can_get_area
-    skip
     room1 = Room.new(:bedroom, 10, '13')
     room2 = Room.new(:living_room, 15, '12')
     assert_equal 130, room1.area
@@ -24,9 +23,6 @@ end
 
 
 
-# pry(main)> room.area
-# #=> 130
-#
 # pry(main)> room.is_painted?
 # #=> false
 #

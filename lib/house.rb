@@ -16,4 +16,10 @@ class House
   def above_market_average?
     price >= 500000
   end
+
+  def rooms_from_category(type_of_room)
+    rooms.find_all do |room|
+      room.category == type_of_room
+    end
+  end
 end

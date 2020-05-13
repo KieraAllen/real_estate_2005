@@ -45,4 +45,13 @@ class House
   def rooms_sorted_by_area
     rooms.sort_by { |room| room.area }.reverse
   end
+
+  def rooms_by_category
+    sort_them_rooms = {}
+    sort_them_rooms[:bedroom] =
+    sort_them_rooms[:living_room] =
+    sort_them_rooms[:basement] = 
+    rooms.sort_by { |room| room.category }
+    sort_them_rooms
+  end
 end

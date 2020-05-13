@@ -12,24 +12,21 @@ class HouseTest < Minitest::Test
 
   def test_it_can_read_price_and_address_attributes
     house = House.new("$400000", "123 sugar lane")
-    
+
     assert_equal 400000, house.price
     assert_equal "123 sugar lane", house.address
+  end
+
+  def test_it_starts_with_no_rooms
+    house = House.new("$400000", "123 sugar lane")
+
+    assert_equal [], house.rooms
   end
 end
 
 
 
 
-# pry(main)> house.price
-# #=> 400000
-#
-# pry(main)> house.address
-# #=> "123 sugar lane"
-#
-# pry(main)> house.rooms
-# #=> []
-#
 # pry(main)> room_1 = Room.new(:bedroom, 10, '13')
 # #=> #<Room:0x00007fccd29b5720...>
 #
